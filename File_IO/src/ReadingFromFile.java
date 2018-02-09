@@ -1,7 +1,9 @@
 import java.io.*;
 
-public class ReadingFromFile {
-    public static void main(String [] args) {
+public class ReadingFromFile 
+	{
+    public static void main(String [] args) 
+    	{
 
         // The name of the file to open.
         String fileName = "HereItIs.txt";
@@ -9,33 +11,33 @@ public class ReadingFromFile {
         // This will reference one line at a time
         String line = null;
 
-        try {
+        try 
+        	{
             // FileReader reads text files in the default encoding.
-            FileReader fileReader = 
-                new FileReader(fileName);
+            FileReader fileReader = new FileReader(fileName);
 
             // Always wrap FileReader in BufferedReader.
             BufferedReader bufferedReader = 
                 new BufferedReader(fileReader);
 
-            while((line = bufferedReader.readLine()) != null) {
+            while((line = bufferedReader.readLine()) != null) 
+            	{
                 System.out.println(line);
-            }	
+            	}	
 
             // Always close files.
             bufferedReader.close();			
-        }
-        catch(FileNotFoundException ex) {
+        	}
+        catch(FileNotFoundException ex) 
+        	{
             System.out.println(
-                "Unable to open file '" + 
-                fileName + "'");				
-        }
-        catch(IOException ex) {
+                "Unable to open file '" + fileName + "'");				
+        	}
+        catch(IOException ex) 
+        	{
             System.out.println(
-                "Error reading file '" 
-                + fileName + "'");					
-            // Or we could just do this: 
-            // ex.printStackTrace();
-        }
-    }
-}
+                "Error reading file '" + fileName + "'");					
+            // Or we could just do this: ex.printStackTrace();
+        	}
+    	}
+	}
