@@ -9,7 +9,7 @@ public class WritingToFile
 
         try {
             // Assume default encoding.
-            FileWriter fileWriter = new FileWriter(fileName);
+            FileWriter fileWriter = new FileWriter(fileName, true);
 
             // Always wrap FileWriter in BufferedWriter.
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
