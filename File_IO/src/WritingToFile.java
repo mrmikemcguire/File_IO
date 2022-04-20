@@ -6,6 +6,8 @@ public class WritingToFile
     	{
         // The name of the file to open.
         String fileName = "HereItIs.txt";
+        //useless comment
+        
 
         try {
             // Assume default encoding.
